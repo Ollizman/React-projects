@@ -4,6 +4,11 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Speedgame from './speedgame/Speedgame';
 import Counter from './counter/Counter';
 import Memorygame from './memorygame/Memorygame';
+import Apitesting from './Apitesting';
+import FormPrac from './Forms/FormPrac';
+import FormPrac2 from './Forms/FormPrac2';
+import MemeApp from './Meme/MemeApp'
+import Hooktest from './Hooktest'
 
 
 
@@ -37,9 +42,14 @@ projects = ({ match }) => {
   return(
     <div className="project-container">
     <h2>Projects</h2>
-    <p><Link to={`${match.url}/counter`}>Contergame</Link></p>
-    <p><Link to={`${match.url}/speedgame`}>Speedgame 2.7</Link></p>
-    <p><Link to={`${match.url}/memorygame`}>Memorygame</Link></p>
+    <p><Link to={`${match.url}/counter`}>Contergame -- </Link>
+    <Link to={`${match.url}/speedgame`}>Speedgame 2.7 -- </Link>
+    <Link to={`${match.url}/memorygame`}>Memorygame -- </Link></p>
+    <p><Link to={`${match.url}/API`}>API-Star-Wars-testing -- </Link>
+    <Link to={`${match.url}/formprac`}>Form Practise -- </Link>
+    <Link to={`${match.url}/formprac2`}>Form Practise 2</Link></p>
+    <p><Link to={`${match.url}/meme`}>Meme Generator -- </Link>
+    <Link to={`${match.url}/hooktest`}>Hooks testing</Link></p>
 
     <div className="projects">
 
@@ -61,8 +71,17 @@ project = ({match}) => {
           <Speedgame /> :
         match.params.name === 'memorygame' ?
           <Memorygame />    :
-      
-          <Counter />        
+          match.params.name === 'counter' ?
+          <Counter />        :
+          match.params.name === 'API' ?
+          <Apitesting />    :
+          match.params.name === 'formprac' ?
+          <FormPrac />  :
+          match.params.name === 'formprac2' ?
+          <FormPrac2 /> :
+          match.params.name === 'meme' ?
+          <MemeApp /> :
+          <Hooktest />
     }
    </div>
   )
