@@ -10,9 +10,6 @@
 
 import React, { useState, useEffect } from 'react'
 
-
-
-
 function Hooktest() {
     const [answer] = useState('No')
     const [counter, setCounter] = useState(0)
@@ -20,7 +17,7 @@ function Hooktest() {
     
     function consoleJsPractises () {
     const jsTesting = [0.1, 55, 3, 8.62, -6, -61, 7]
-    //js tehtävä: poimi arraystä Pos. kokonaisluvut ja palauta ne arrayssä neliöiksi muutettuna.
+    //js tehtava: poimi arraysta Pos. kokonaisluvut ja palauta ne arrayssa neliöiksi muutettuna.
 
     const newArray = jsTesting.filter(num => Number.isInteger(num) && num > 0).map(num => num*num)
 
@@ -31,6 +28,23 @@ function Hooktest() {
     }
     console.log(plussalasku(5));
     console.log(plussalasku(5,60));
+
+    const summer = (...args) => args.reduce((a, b) => a+b, 100)
+    console.log(summer(1,2,3,4,5,6))
+
+    //lokin päällä lokki objektin sisalla toinen
+
+    const lokki = {
+       laululokki: {maara: 10, sijainti: 'Eurooppa'},
+        naurulokki: {maara: 90, sijainti: 'Suomi'},
+        harmaalokki: {maara: 120, sijainti: 'Kanada'}
+    }
+    console.log("Harmaalokkien määrä on: ", lokki.harmaalokki.maara)
+    const naurulokinSijainti = (lokki) => {
+        const {naurulokki:{sijainti: naurulokinSijainti}} = lokki;
+        return naurulokinSijainti;
+    }
+    console.log('naurulokin sijainti: ' + naurulokinSijainti(lokki))
 
     }
 

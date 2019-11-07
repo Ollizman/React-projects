@@ -23,7 +23,8 @@ const Cards = (props) => {
         <div className= {'card '+ props.name + (props.active === true ? " active" : '')} 
         onClick = {props.click} >     
              
-         {props.active === false ? props.name : ""}
+         {props.active === true && props.name}
+        <p> {props.active === 'done' && 'Done! ' + props.name} </p>
         
         </div>
         );
