@@ -5,11 +5,12 @@ const closeHandler = () => {
     window.location.reload()
 }
 
-const MemorygameOver = () => {
+const MemorygameOver = (props) => {
     return (
 <div id='overlay'>
     <div className='gameoverbox'>
-        <p>Game over!! You remembered 'em All!! </p>
+        <h3>Completed! You Matched em all! </h3>
+        <p>..with {props.missmatches} missmatches! =) </p>
         <button id='closeButton' onClick={closeHandler}> Close </button>
     </div>
 </div>

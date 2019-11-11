@@ -4,104 +4,104 @@ import Cards from './Cards';
 import MemorygameOver from './MemorygameOver'
 
 
-let firstClick = 0
-let secondClick = 0
-let firstName = ''
-let secondName = ''
-let timer
-
 class Memorygame extends Component {
-
-  state = {
-    animals: [
-      { id: 1, name: 'dog', active: false },
-      { id: 2, name: 'cat', active: false },
-      { id: 3, name: 'horse', active: false },
-      { id: 4, name: 'snake', active: false },
-      { id: 5, name: 'elephant', active: false },
-      { id: 6, name: 'mouse', active: false },
-      { id: 7, name: 'lion', active: false },
-      { id: 8, name: 'giraffe', active: false },
-      { id: 9, name: 'dog', active: false },
-      { id: 10, name: 'cat', active: false },
-      { id: 11, name: 'horse', active: false },
-      { id: 12, name: 'snake', active: false },
-      { id: 13, name: 'elephant', active: false },
-      { id: 14, name: 'mouse', active: false },
-      { id: 15, name: 'lion', active: false },
-      { id: 16, name: 'giraffe', active: false }
-    ],
-    click: 1,
-    gameOverCounter: 0
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      animals: [
+        { id: 1, name: 'dog', active: false },
+        { id: 2, name: 'cat', active: false },
+        { id: 3, name: 'horse', active: false },
+        { id: 4, name: 'snake', active: false },
+        { id: 5, name: 'elephant', active: false },
+        { id: 6, name: 'mouse', active: false },
+        { id: 7, name: 'lion', active: false },
+        { id: 8, name: 'giraffe', active: false },
+        { id: 9, name: 'dog', active: false },
+        { id: 10, name: 'cat', active: false },
+        { id: 11, name: 'horse', active: false },
+        { id: 12, name: 'snake', active: false },
+        { id: 13, name: 'elephant', active: false },
+        { id: 14, name: 'mouse', active: false },
+        { id: 15, name: 'lion', active: false },
+        { id: 16, name: 'giraffe', active: false }
+      ],
+      click: 1,
+      missmatches: 0,
+      gameOverCounter: 0,
+      firstClick: '',
+      firstClickName: '',
+      secondClick: '',
+      secondClickName: ''
+    }
+    this.shuffle(this.state.animals);
   }
 
   clickHandler = (animal) => {
     if (this.state.click === 1) {
-      firstClick = animal.id;
-      firstName = animal.name
       this.setState(prevState => ({
         animals: prevState.animals.map(
           ani => ani.id === animal.id ? { ...ani, active: true } : ani
-        )
+        ),
+        firstClick: animal.id,
+        firstClickName: animal.name
       }))
     } else {
-      secondClick = animal.id;
-      secondName = animal.name;
       this.setState(prevState => ({
         animals: prevState.animals.map(
           ani => ani.id === animal.id ? { ...ani, active: true } : ani
-        )
+        ),
+        secondClick: animal.id,
+        secondClickName: animal.name
       }))
-      firstClick !== secondClick & firstName === secondName && (this.hit(animal))
 
-      timer = setTimeout(handleEndOfTurn(), 1000)
-
+      setTimeout(this.handleEndOfTurn, 650)
     }
 
-    function handleEndOfTurn() {
-      firstClick = 0;
-      firstName = '';
-      secondClick = 0;
-      secondName = '';
-      clearTimeout(timer)
-    }
+    this.state.click === 1 ? this.setState({ click: 2 }) : this.setState({ click: 1 })
+  }
 
-    console.log('First = ' + firstClick + ' ' + firstName)
-    console.log('Second = ' + secondClick + ' ' + secondName)
-    
-    if (this.state.click === 1) {
-      this.setState({ click: 2 })
+  compareCards = () => {
+    if (this.state.firstClick !== this.state.secondClick & this.state.firstClickName === this.state.secondClickName) {
+      console.log('funktiota HIT kutsutaan!')
+      this.hit(this.state.firstClickName)
     } else {
-      this.setState({ click: 1 })
+      this.setState({ missmatches: this.state.missmatches + 1 })
     }
+  }
+
+  handleEndOfTurn = () => {
+    console.log('First = ' + this.state.firstClick + ' ' + this.state.firstClickName)
+    console.log('Second = ' + this.state.secondClick + ' ' + this.state.secondClickName)
+    this.compareCards()
+
+    this.setState(prevState => ({
+      animals: prevState.animals.map(
+        ani => ani.active === true ? { ...ani, active: false } : ani
+      ),
+      firstClick: 0,
+      firstClickName: '',
+      secondClick: 0,
+      secondClickName: ''
+    }))
 
   }
 
-  hit = (animal) => {
-    console.log('Jippii')
-    const name = animal.name;
-    console.log(name)
+  hit = (animalName) => {
+    const name = animalName;
+    console.log('Jippii OSUMA! eläimeen : ' + name)
     this.setState(prevState => ({
       animals: prevState.animals.map(
         ani => ani.name === name ? { ...ani, active: 'done' } : ani
       ),
-      gameOverCounter : this.state.gameOverCounter + 1
-        
+      gameOverCounter: this.state.gameOverCounter + 1
+      //since this reaches value of 8, pops up the GameOver Component 
+
     }))
     console.log('gameoverCounter: ' + this.state.gameOverCounter)
-    // this.state.gameOverCounter === 8 && this.setState({gameOverCounter : 'over'})
+
   }
 
-
-
-  clickNomatch = () => {
-    //miss cliks
-    console.log("missclicki!")
-  }
-  componentDidMount = () => {
-    this.shuffle(this.state.animals)
-  }
 
   shuffle = (array) => { //sekoittaa annetun arrayn järjestyksen!
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -121,35 +121,28 @@ class Memorygame extends Component {
 
     return array;
   }
-  doCards = () => {
-
-    return (
-      <>
-        {this.state.animals.map(animal => (
-          <Cards
-            key={animal.id}
-            name={animal.name}
-            active={animal.active}
-            click={animal.active !== 'done' ? (() => this.clickHandler(animal)) : undefined} />
-
-        ))}
-
-      </>
-
-    )
-  }
 
   render() {
+
     return (
       <div className="grid-container">
         <div className="wrapper">
-          {this.doCards()}
+          {console.log('React renderöi näkymän!')}
+          {this.state.animals.map(animal => (
+            <Cards
+              key={animal.id}
+              name={animal.name}
+              active={animal.active}
+              click={animal.active !== 'done' ? (() => this.clickHandler(animal)) : undefined} />
+          ))}
         </div>
-        <button>Uusi peli</button>
-        {this.state.gameOverCounter === 8 && <MemorygameOver /> }
+
+        {this.state.gameOverCounter === 8 && <MemorygameOver
+          missmatches={this.state.missmatches} />}
+
       </div>
-    );
+    )
   }
+
 }
 export default Memorygame;
-// && console.log('Game Over')

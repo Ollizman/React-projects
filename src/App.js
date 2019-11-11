@@ -14,124 +14,121 @@ import Hooktest from './Hooktest'
 
 class App extends Component {
 
-/*
-1. Router
-HashRouter /../#..
-BrowserRouter /../..
-2. Route Switch
+  /*
+  1. Router
+  HashRouter /../#..
+  BrowserRouter /../..
+  2. Route Switch
+  
+  */
+  home = () => {
+    return (
+      <div>
+        <h2>Home</h2>
+        <p>In this page there are some projects, that i have done during my studies of React programming</p>
+      </div>
+    )
+  }
+  about = () => {
+    return (
+      <div>
+        <h2>About</h2>
+        <p>How cool is that!</p>
+      </div>
+    )
+  }
 
-*/
-home = () => {
-  return(
-    <div>
-  <h2>Home</h2>
-  <p>This is home page</p>
-  </div>
-  )
-}
-about = () => {
-  return(
-    <div>
-    <h2>About</h2>
-    <p>We practise basci react apps</p>
-    </div>
-  )
-}
+  projects = ({ match }) => {
+    return (
+      <div className="project-container">
+        <h2>Projects</h2>
+        <p> <Link to={`${match.url}/counter`}>Contergame -- </Link>
+          <Link to={`${match.url}/speedgame`}>Speedgame 2.7 -- </Link>
+          <Link to={`${match.url}/memorygame`}>Memorygame -- </Link>
+          <Link to={`${match.url}/API`}>API-Star-Wars-testing -- </Link> </p>
+        <p> <Link to={`${match.url}/formprac`}>Form Practise -- </Link>
+          <Link to={`${match.url}/formprac2`}>Form Practise 2 -- </Link>
+          <Link to={`${match.url}/meme`}>Meme Generator -- </Link>
+          <Link to={`${match.url}/hooktest`}>Hooks testing</Link></p>
 
-projects = ({ match }) => {
-  return(
-    <div className="project-container">
-    <h2>Projects</h2>
-    <p><Link to={`${match.url}/counter`}>Contergame -- </Link>
-    <Link to={`${match.url}/speedgame`}>Speedgame 2.7 -- </Link>
-    <Link to={`${match.url}/memorygame`}>Memorygame -- </Link></p>
-    <p><Link to={`${match.url}/API`}>API-Star-Wars-testing -- </Link>
-    <Link to={`${match.url}/formprac`}>Form Practise -- </Link>
-    <Link to={`${match.url}/formprac2`}>Form Practise 2</Link></p>
-    <p><Link to={`${match.url}/meme`}>Meme Generator -- </Link>
-    <Link to={`${match.url}/hooktest`}>Hooks testing</Link></p>
+        <div className="projects">
 
-    <div className="projects">
+          <Route
+            path={`${match.path}/:name`}
+            render={(props) => <this.project {...props} />}
+          />
 
-     <Route 
-     path = {`${match.path}/:name`}
-     render = { (props) => <this.project {...props} />}
-     />
-    
-    </div>
-    </div>
-  )
-}
+        </div>
+      </div >
+    )
+  }
 
-project = ({match}) => {
-  return(
-    <div>
-      <p>This is my project {match.params.name}</p>
-      {match.params.name === 'speedgame' ? 
+  project = ({ match }) => {
+    return (
+      <div>
+        <p>This is my project {match.params.name}</p>
+        {match.params.name === 'speedgame' ?
           <Speedgame /> :
-        match.params.name === 'memorygame' ?
-          <Memorygame />    :
-          match.params.name === 'counter' ?
-          <Counter />        :
-          match.params.name === 'API' ?
-          <Apitesting />    :
-          match.params.name === 'formprac' ?
-          <FormPrac />  :
-          match.params.name === 'formprac2' ?
-          <FormPrac2 /> :
-          match.params.name === 'meme' ?
-          <MemeApp /> :
-          <Hooktest />
-    }
-   </div>
-  )
-}
-nav = () => {
-  return (
-    <div className="nav">
-   
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/projects">Projects</Link>
-          </li>
-        </ul>
-      </nav>
-      
-    </div>
-  )
-}
+          match.params.name === 'memorygame' ?
+            <Memorygame /> :
+            match.params.name === 'counter' ?
+              <Counter /> :
+              match.params.name === 'API' ?
+                <Apitesting /> :
+                match.params.name === 'formprac' ?
+                  <FormPrac /> :
+                  match.params.name === 'formprac2' ?
+                    <FormPrac2 /> :
+                    match.params.name === 'meme' ?
+                      <MemeApp /> :
+                      <Hooktest />
+        }
+      </div>
+    )
+  }
+  nav = () => {
+    return (
+      <div className="nav">
 
-render()  {
-
-  return (
-    <div className="container">
-      <Router>
-
-    {this.nav()}
-
-    <Switch>
-      <Route exact path="/" component={this.home} />
-
-      <Route path="/about" component={this.about} />
-
-      <Route path="/projects" component={this.projects} />
-
-    </Switch>
+        <nav>
 
 
-      </Router>
-    </div>
+          <Link to="/"> Home </Link>
 
-  );
+          <Link to="/about"> About</Link>
 
-};
+          <Link to="/projects"> Projects </Link>
+
+        </nav>
+
+      </div>
+    )
+  }
+
+  render() {
+
+    return (
+      <div className="container">
+        <Router>
+
+          {this.nav()}
+
+          <Switch>
+            <Route exact path="/" component={this.home} />
+
+            <Route path="/about" component={this.about} />
+
+            <Route path="/projects" component={this.projects} />
+
+          </Switch>
+
+
+        </Router>
+      </div>
+
+    );
+
+  };
 }
 export default App;
 
@@ -168,23 +165,23 @@ const Portfolio = () => {
 
     </Switch>
 
-          <Route 
+          <Route
       path = {`${match.path}/:name`}
       render={match.params.name === 'counter' ? ({ match }) => (
         <div>
           {' '}
           <h3> {match.params.name} </h3>
             <Counter />
-          
+
           </div>
       ):  ({ match }) => (
       <div>
-         
+
           <h3> {match.params.name} </h3>
             <Speedgame />
-          
+
           </div>
       )
-    }      
+    }
      />
 */

@@ -3,19 +3,6 @@ import './Cards.css';
 
 
 
-/*const doCards = () => {
-   animals.map(animal => ({order:getRandomInt(animal.id,16), }))
-    
-        return(
-        <div className= {'card ' + animals[i].name}>
-            ID: {animals[i].id}
-        </div>
-        )
-        
-    
-    
-}*/
-
 const Cards = (props) => {
     
         return(
