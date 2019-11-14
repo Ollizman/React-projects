@@ -9,7 +9,12 @@
   
     
 }
-
+.card img {
+    width: 100px;
+    height: 80px;
+    margin-top: 20px;
+}
 .active {
         box-shadow: inset 0 0 5px 15px rgb(148, 39, 39);
+        
 }

@@ -9,6 +9,7 @@ import FormPrac from './Forms/FormPrac';
 import FormPrac2 from './Forms/FormPrac2';
 import MemeApp from './Meme/MemeApp'
 import Hooktest from './Hooktest'
+import MemoryHooks from './memorygame/MemoryHooks'
 
 
 
@@ -41,7 +42,7 @@ class App extends Component {
   projects = ({ match }) => {
     return (
       <div className="project-container">
-        <h2>Projects</h2>
+        <h2> Projects </h2>
         <p> <Link to={`${match.url}/counter`}>Contergame -- </Link>
           <Link to={`${match.url}/speedgame`}>Speedgame 2.7 -- </Link>
           <Link to={`${match.url}/memorygame`}>Memorygame -- </Link>
@@ -49,7 +50,10 @@ class App extends Component {
         <p> <Link to={`${match.url}/formprac`}>Form Practise -- </Link>
           <Link to={`${match.url}/formprac2`}>Form Practise 2 -- </Link>
           <Link to={`${match.url}/meme`}>Meme Generator -- </Link>
-          <Link to={`${match.url}/hooktest`}>Hooks testing</Link></p>
+          <Link to={`${match.url}/hooktest`}>Hooks testing -- </Link> 
+          <Link to={`${match.url}/memoryhooks`}>MemoryHooks</Link> 
+          
+          </p>
 
         <div className="projects">
 
@@ -81,7 +85,9 @@ class App extends Component {
                     <FormPrac2 /> :
                     match.params.name === 'meme' ?
                       <MemeApp /> :
-                      <Hooktest />
+                      match.params.name === 'hooktest' ?
+                      <Hooktest /> :
+                      <MemoryHooks />
         }
       </div>
     )

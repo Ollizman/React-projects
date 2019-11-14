@@ -11,7 +11,7 @@ class Apitesting extends Component {
             film : {}
         }
     }
-    
+   
     componentDidMount() {
         this.setState({loading: true})
         fetch("https://swapi.co/api/films/1")
