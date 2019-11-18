@@ -43,27 +43,28 @@ class App extends Component {
     return (
       <div className="project-container">
         <h2> Projects </h2>
-        <p> <Link to={`${match.url}/counter`}>Contergame -- </Link>
+        <p>
+          <Link to={`${match.url}/counter`}>Contergame -- </Link>
           <Link to={`${match.url}/speedgame`}>Speedgame 2.7 -- </Link>
           <Link to={`${match.url}/memorygame`}>Memorygame -- </Link>
-          <Link to={`${match.url}/API`}>API-Star-Wars-testing -- </Link> </p>
-        <p> <Link to={`${match.url}/formprac`}>Form Practise -- </Link>
+          <Link to={`${match.url}/API`}>API-Star-Wars-testing -- </Link>
+        </p>
+        <p>
+          <Link to={`${match.url}/formprac`}>Form Practise -- </Link>
           <Link to={`${match.url}/formprac2`}>Form Practise 2 -- </Link>
           <Link to={`${match.url}/meme`}>Meme Generator -- </Link>
-          <Link to={`${match.url}/hooktest`}>Hooks testing -- </Link> 
-          <Link to={`${match.url}/memoryhooks`}>MemoryHooks</Link> 
-          
-          </p>
+          <Link to={`${match.url}/hooktest`}>Hooks testing -- </Link>
+          <Link to={`${match.url}/memoryhooks`}>MemoryHooks</Link>
+        </p>
 
         <div className="projects">
-
           <Route
             path={`${match.path}/:name`}
             render={(props) => <this.project {...props} />}
           />
 
         </div>
-      </div >
+      </div>
     )
   }
 
@@ -86,8 +87,8 @@ class App extends Component {
                     match.params.name === 'meme' ?
                       <MemeApp /> :
                       match.params.name === 'hooktest' ?
-                      <Hooktest /> :
-                      <MemoryHooks />
+                        <Hooktest /> :
+                        <MemoryHooks />
         }
       </div>
     )

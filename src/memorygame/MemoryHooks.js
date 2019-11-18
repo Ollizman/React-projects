@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Cards from './Cards'
+import Card from './Card'
 import './Memorygame.css'
 
 
@@ -14,26 +14,27 @@ function MemoryHooks() {
     const [missmatch, setMissmatch] = useState(0)
 
     const clickHandler = (animal) => {
-        setAnimals(animals.map(ani => ani.id === animal.id ? {...ani, active:true} : ani))
-        console.log(animals) //jostain syystä ensimmäistä clickausta ei käsitellä samalla tavalla kuin muita.
+        const {id, name} = animal
+
+        if(name === 'done') return
+
+        setAnimals(animals.map(ani => ani.id === id ? {...ani, active:true} : ani))
+        console.log(animal)
+        
         if (click === 1 ) {
             setClick(2)
             return
         } else {
-            const clickedAnimals = animals.filter(ani => ani.active === true);
-            console.log(clickedAnimals)
-            if (clickedAnimals.length === 2 ) {
-            clickedAnimals[0].name === clickedAnimals[1].name && clickedAnimals[0].id !== clickedAnimals[1].id
-            ? match(clickedAnimals) : missedMatch() }
+            const Active = animals.filter(ani => ani.active === true)
+           
+           Active[0].name === name && Active[0].id !== id ? match(animal) : missedMatch()
             setClick(1)
+            setTimeout(() => setAnimals(animals.map(ani => ani.name !== 'done' ? {...ani, active:false} : ani)),800)
         }
     }
 
-    const match = (animals) => {
-      //korjattava varmasti setAnimals kautta et muuttaa statea.
-        animals[0].active = 'done';
-        animals[1].active = 'done';
-
+    const match = (animal) => {     
+      setAnimals(animals.map(ani => ani.name === animal.name ? {...ani, name:'done', active:true} : ani))
     }
 
     const missedMatch = () => {
@@ -45,7 +46,7 @@ function MemoryHooks() {
             <div className="wrapper">
 
                 {animals.map(animal => (
-                    <Cards
+                    <Card
                         key={animal.id}
                         name={animal.name}
                         active={animal.active}
