@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 
 
 class Card extends Component {
+    
     static defaultProps = {
         name: '',
         url: '',
@@ -11,8 +12,7 @@ class Card extends Component {
 }
 
     urlCheck = () => this.props.url.startsWith('https://cdn.pixabay.com/photo/')
-           
-
+          
     static propTypes = { //setting accepted prop types and that the prop is required for active prop.
         active: PropTypes.bool.isRequired, //function based component, Cards.propTypes = {}
         name: PropTypes.string
@@ -30,7 +30,6 @@ class Card extends Component {
         }
     }
     render() {
-       
         const { url, name, click, active } = this.props
         const Image = () => active ? <img 
         src={url} 
@@ -38,7 +37,7 @@ class Card extends Component {
         style={{borderRadius: '20%'}}
          /> : <div />
         
-        const activeStyle = active ? " active" : ''
+        const activeStyle = active ? "active" : ''
 
         return (
             <div className={'card ' + activeStyle} onClick={click} >

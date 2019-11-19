@@ -29,23 +29,20 @@ class Memorygame extends Component {
 
     this.state = {
       animals: animalsToState,
-      firstClickId: 0,
       firstClickName: '',
-      secondClickId: 0,
       secondClickName: '',
       click: 1,
       missmatches: 0,
-      gameOverCounter: 0,
-    }
-
+      matches: 0,
+    }    
     this.shuffle(this.state.animals);
   }
 
   clickHandler = animal => {
     const { id, name, active } = animal
-    const { click, secondClickId } = this.state
-      // if the animal is paired, the name substate has been changed to 'done'
-    if (name === 'done' || active === true || secondClickId !== 0) { 
+    const { click, secondClickName } = this.state
+    // if the animal is paired, the name substate has been changed to 'done'
+    if (name === 'done' || active === true || secondClickName !== '') {
       return
     }
 
@@ -56,14 +53,12 @@ class Memorygame extends Component {
     }))
     if (click === 1) {
       this.setState({
-        firstClickId: id,
         firstClickName: name,
         click: 2
       })
       return
-    } else {
+    } else { //..click === 2 ..
       this.setState({
-        secondClickId: id,
         secondClickName: name,
         click: 1
       })
@@ -72,12 +67,9 @@ class Memorygame extends Component {
   }
 
   compareCards = () => {
-    const { missmatches, firstClickId, secondClickId, firstClickName, secondClickName } = this.state
-    if (firstClickId !== secondClickId & firstClickName === secondClickName) {
-      this.hit(firstClickName)
-    } else {
-      this.setState({ missmatches: missmatches + 1 })
-    }
+    const { missmatches, firstClickName, secondClickName } = this.state
+    firstClickName === secondClickName ? this.hit(firstClickName)
+    : this.setState({ missmatches: missmatches + 1 })
   }
 
   handleEndOfTurn = () => {
@@ -86,27 +78,23 @@ class Memorygame extends Component {
       animals: prevState.animals.map(
         ani => ani.name !== 'done' && ani.active === true ? { ...ani, active: false } : ani
       ),
-      firstClickId: 0,
       firstClickName: '',
-      secondClickId: 0, //HUOM! clickhandler metodi ei toimi ellei tätä asetetea arvoon 0
-      secondClickName: ''
+      secondClickName: '' //HUOM! clickhandler metodi ei toimi ellei tätä aseteta arvoon ''
     }))
   }
 
   hit = animalName => {
     const name = animalName
-    const { gameOverCounter } = this.state
+    const { matches } = this.state
     console.log('Jippii OSUMA! eläimeen : ' + name)
+
     this.setState(prevState => ({
       animals: prevState.animals.map(
         ani => ani.name === name ? { ...ani, name: 'done' } : ani
       ),
-      gameOverCounter: gameOverCounter + 1
-      //since this reaches value of 8, pops up the GameOver Component 
-
+      matches: matches + 1  //since this reaches value of 8, pops up the GameOver Component 
     }))
-    console.log('gameoverCounter: ' + gameOverCounter)
-
+    console.log('matches: ' + matches)
   }
 
   shuffle = array => { //sekoittaa annetun arrayn järjestyksen!
@@ -138,14 +126,14 @@ class Memorygame extends Component {
   )
 
   render() {
-    const { gameOverCounter, missmatches } = this.state
+    const { matches, missmatches } = this.state
     console.log('React renderöi näkymän!')
     return (
       <div className="grid-container">
         <div className="wrapper">
           {this.CardsToRender()}
         </div>
-        {gameOverCounter === 8 &&
+        {matches === 8 &&
           <MemorygameOver missmatches={missmatches} />
         }
       </div>

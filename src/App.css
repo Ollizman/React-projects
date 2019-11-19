@@ -4,17 +4,27 @@
     background-color: black;
 }
 
+ul {
+    list-style-type: none;
+    margin-left: 25px;
+    padding: 0;
+    text-align: left;
+}
+
 .nav {
     text-align: left;
 }
+
 .projects {
     background-color: rgb(8, 65, 25);
 }
+
 a:link {
     color: red;
-  }
-  
-  /* visited link */
-  a:visited {
+}
+
+/* visited link */
+
+a:visited {
     color: white;
-  }
+}

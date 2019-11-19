@@ -5,7 +5,7 @@ import Speedgame from './speedgame/Speedgame';
 import Counter from './counter/Counter';
 import Memorygame from './memorygame/Memorygame';
 import Apitesting from './Apitesting';
-import FormPrac from './Forms/FormPrac';
+// import FormPrac from './Forms/FormPrac';
 import FormPrac2 from './Forms/FormPrac2';
 import MemeApp from './Meme/MemeApp'
 import Hooktest from './Hooktest'
@@ -24,18 +24,35 @@ class App extends Component {
   */
   home = () => {
     return (
-      <div>
+      <>
         <h2>Home</h2>
         <p>In this page there are some projects, that i have done during my studies of React programming</p>
-      </div>
+      </>
     )
   }
   about = () => {
     return (
-      <div>
+      <>
         <h2>About</h2>
-        <p>How cool is that!</p>
-      </div>
+        <ul>
+          <li>
+            Counter =  tehty Hookseilla sekä käyttäen Redux kirjastoa state hallintaan.'
+        </li>
+          <li>
+            Speedgame = alkuvaiheen projekti.
+        </li>
+          <li>
+            <h4> Memorygame = Pisin projekti näistä. Löydä 8 eläinparia mahdollisimman vähillä yrityksillä! </h4>
+          </li>
+          <li>
+            Form pracs = Testailtu formien tekemistä Reactilla.
+        </li>
+          <li>
+            Meme Generator = Rajapinnasta haettuja meemejä renderöidään näytölle satunnaisesti tekstin kera.
+        </li>
+        </ul>
+
+      </>
     )
   }
 
@@ -47,14 +64,11 @@ class App extends Component {
           <Link to={`${match.url}/counter`}>Contergame -- </Link>
           <Link to={`${match.url}/speedgame`}>Speedgame 2.7 -- </Link>
           <Link to={`${match.url}/memorygame`}>Memorygame -- </Link>
-          <Link to={`${match.url}/API`}>API-Star-Wars-testing -- </Link>
         </p>
         <p>
-          <Link to={`${match.url}/formprac`}>Form Practise -- </Link>
           <Link to={`${match.url}/formprac2`}>Form Practise 2 -- </Link>
           <Link to={`${match.url}/meme`}>Meme Generator -- </Link>
-          <Link to={`${match.url}/hooktest`}>Hooks testing -- </Link>
-          <Link to={`${match.url}/memoryhooks`}>MemoryHooks</Link>
+
         </p>
 
         <div className="projects">
@@ -78,17 +92,11 @@ class App extends Component {
             <Memorygame /> :
             match.params.name === 'counter' ?
               <Counter /> :
-              match.params.name === 'API' ?
-                <Apitesting /> :
-                match.params.name === 'formprac' ?
-                  <FormPrac /> :
-                  match.params.name === 'formprac2' ?
-                    <FormPrac2 /> :
-                    match.params.name === 'meme' ?
-                      <MemeApp /> :
-                      match.params.name === 'hooktest' ?
-                        <Hooktest /> :
-                        <MemoryHooks />
+              match.params.name === 'formprac2' ?
+                <FormPrac2 /> :
+                match.params.name === 'meme' ?
+                  <MemeApp /> : <div />
+
         }
       </div>
     )
