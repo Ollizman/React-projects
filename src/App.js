@@ -4,12 +4,12 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Speedgame from './speedgame/Speedgame';
 import Counter from './counter/Counter';
 import Memorygame from './memorygame/Memorygame';
-import Apitesting from './Apitesting';
+// import Apitesting from './Apitesting';
 // import FormPrac from './Forms/FormPrac';
 import FormPrac2 from './Forms/FormPrac2';
 import MemeApp from './Meme/MemeApp'
-import Hooktest from './Hooktest'
-import MemoryHooks from './memorygame/MemoryHooks'
+// import Hooktest from './Hooktest'
+// import MemoryHooks from './memorygame/MemoryHooks'
 
 
 
@@ -36,20 +36,21 @@ class App extends Component {
         <h2>About</h2>
         <ul>
           <li>
-            Counter =  tehty Hookseilla sekä käyttäen Redux kirjastoa state hallintaan.'
-        </li>
-          <li>
-            Speedgame = alkuvaiheen projekti.
-        </li>
-          <li>
             <h4> Memorygame = Pisin projekti näistä. Löydä 8 eläinparia mahdollisimman vähillä yrityksillä! </h4>
           </li>
           <li>
-            Form pracs = Testailtu formien tekemistä Reactilla.
-        </li>
+            <h5>Counter =  tehty Hookseilla sekä käyttäen Redux kirjastoa state hallintaan.</h5>
+          </li>
           <li>
-            Meme Generator = Rajapinnasta haettuja meemejä renderöidään näytölle satunnaisesti tekstin kera.
-        </li>
+            <h5> Speedgame = alkuvaiheen projekti. </h5>
+          </li>
+
+          <li>
+            <h5> Form pracs = Testailtu formien tekemistä Reactilla. </h5>
+          </li>
+          <li>
+            <h5> Meme Generator = Rajapinnasta haettuja meemejä renderöidään näytölle satunnaisesti tekstin kera. </h5>
+          </li>
         </ul>
 
       </>

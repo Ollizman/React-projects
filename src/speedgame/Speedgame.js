@@ -77,8 +77,6 @@ console.log(this.state.pace);
     if (this.state.missclicks >= 3) {
       this.stopGame();
     }
-    //en ymmärrä miksi stop game tulee vasta kun missclickejä on 5. vaikka määritelty lopuksi ja jos >3.
-    //laitoin >=3 jolloin käytännössä pitää olla 4...:o
   }
 
 
