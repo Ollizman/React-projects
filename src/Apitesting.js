@@ -23,15 +23,6 @@ class Apitesting extends Component {
                     loading: false
                 })
             })
-        //     console.log(this.state.link)
-        // fetch(this.state.link)
-        //     .then(response => response.json())
-        //     .then(data => {
-        //         this.setState({
-        //             character : data,
-        //             
-        //         })
-        //     })
     }
 
     render() {
