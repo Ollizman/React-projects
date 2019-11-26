@@ -30,8 +30,7 @@ class App extends Component {
         <ul>
           <li>
             <h4>Memorygame : </h4>
-            Pisin projekti näistä. Löydä 8 eläinparia mahdollisimman vähillä
-            yrityksillä! <br />
+            Uusin projekti. Löydä 8 eläinparia mahdollisimman vähillä yrityksillä! <br />
             Optimoitu renderöintiä React Memo():n avulla
           </li>
           <li>
