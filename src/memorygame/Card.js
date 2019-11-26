@@ -7,16 +7,16 @@ function Card(props) {
     name: "",
     url: "",
     active: false
-  }
+  };
 
   Card.propTypes = {
     //setting accepted prop types and that the prop is required for active prop.
     active: PropTypes.bool.isRequired, //function based component, Cards.propTypes = {}
     name: PropTypes.string
-  }
+  };
 
-  const { url, name, click, active } = props
-  console.log("rendered: ", name)
+  const { url, name, click, active } = props;
+  console.log("rendered: ", name);
   const Image = () =>
     active ? (
       <img src={url} alt={name} style={{ borderRadius: "20%" }} />
@@ -24,7 +24,7 @@ function Card(props) {
       <div />
     );
 
-  const activeStyle = active ? "active" : ""
+  const activeStyle = active ? "active" : "";
 
   return (
     <div className={"card " + activeStyle} onClick={click}>
@@ -33,14 +33,14 @@ function Card(props) {
   );
 }
 function areEqual(prevProps, nextProps) {
-  const { found, active } = nextProps
+  const { found, active } = nextProps;
   if (found === 1 || active === prevProps.active) {
-    return true
+    return true;
   }
-  return false
+  return false;
 }
 
-export default React.memo(Card, areEqual)
+export default React.memo(Card, areEqual);
 
 /*
 
