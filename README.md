@@ -1,20 +1,20 @@
 -- Projekteja:
 
-Memorygame <br />
-    Uusin projekti. Löydä 8 eläinparia mahdollisimman vähillä yrityksillä! <br />
+Memorygame
+    Uusin projekti. Löydä 8 eläinparia mahdollisimman vähillä yrityksillä
     Optimoitu renderöintiä React Memo():n avulla
 
-Counter <br />
+Counter
     tehty käyttäen Redux kirjastoa state hallintaan.
 
-Speedgame <br />
+Speedgame
     tehty React Hooks tyylillä.
 
-API testing: <br />
+API testing
     Testattu Star Wars rajapinnasta tiedon hakemista ja näyttämistä
 
-Form pracs: <br />
+Form pracs
     Testailtu formien tekemistä Reactilla.
 
-Meme Generator: <br />
+Meme Generator
     Rajapinnasta haettuja meemejä renderöidään näytölle satunnaisesti tekstin kera.
