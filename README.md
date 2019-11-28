@@ -1,20 +1,20 @@
--- Projekteja:
+<h6>-- Projekteja:</h6>
 
-Memorygame
-    Uusin projekti. Löydä 8 eläinparia mahdollisimman vähillä yrityksillä
+Memorygame: <br/>
+ -  Uusin projekti. Löydä 8 eläinparia mahdollisimman vähillä yrityksillä
     Optimoitu renderöintiä React Memo():n avulla
 
-Counter
-    tehty käyttäen Redux kirjastoa state hallintaan.
+Counter: <br/>
+ -  tehty käyttäen Redux kirjastoa state hallintaan.
 
-Speedgame
-    tehty React Hooks tyylillä.
+Speedgame: <br/>
+ -  tehty React Hooks tyylillä.
 
-API testing
-    Testattu Star Wars rajapinnasta tiedon hakemista ja näyttämistä
+API testing: <br/>
+ -  Testattu Star Wars rajapinnasta tiedon hakemista ja näyttämistä
 
-Form pracs
-    Testailtu formien tekemistä Reactilla.
+Form pracs: <br/>
+ -  Testailtu formien tekemistä Reactilla.
 
-Meme Generator
-    Rajapinnasta haettuja meemejä renderöidään näytölle satunnaisesti tekstin kera.
+Meme Generator: <br/>
+ -  Rajapinnasta haettuja meemejä renderöidään näytölle satunnaisesti tekstin kera.
