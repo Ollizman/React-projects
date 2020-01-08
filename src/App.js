@@ -4,12 +4,11 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Speedgame from "./speedgame/Speedgame";
 import Counter from "./counter/Counter";
 import Memorygame from "./memorygame/Memorygame";
-// import Apitesting from './Apitesting';
-// import FormPrac from './Forms/FormPrac';
+import typingGame from "./typinggame/Typinggame";
 import FormPrac2 from "./Forms/FormPrac2";
 import MemeApp from "./Meme/MemeApp";
-// import Hooktest from './Hooktest'
-// import MemoryHooks from './memorygame/MemoryHooks'
+import Typinggame from "./typinggame/Typinggame";
+
 
 class App extends Component {
   home = () => {
@@ -67,6 +66,7 @@ class App extends Component {
         <p>
           <Link to={`${match.url}/formprac2`}>Form Practise 2 -- </Link>
           <Link to={`${match.url}/meme`}>Meme Generator -- </Link>
+          <Link to={`${match.url}/typing`}>Typing game -- </Link>
         </p>
 
         <div className="projects">
@@ -81,7 +81,7 @@ class App extends Component {
 
   project = ({ match }) => {
     return (
-      <div>
+      <>
         <p>This is my project {match.params.name}</p>
         {match.params.name === "speedgame" ? (
           <Speedgame />
@@ -93,10 +93,13 @@ class App extends Component {
           <FormPrac2 />
         ) : match.params.name === "meme" ? (
           <MemeApp />
-        ) : (
+        ) : match.params.name === "typing" ? (
+          <Typinggame />
+        ) :
+          (
           <div />
         )}
-      </div>
+      </>
     );
   };
   nav = () => {
