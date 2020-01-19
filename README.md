@@ -1,10 +1,10 @@
 <h6>-- Projekteja:</h6>
 
-Memorygame: <br/>
+Memory game: <br/>
  -  Uusin projekti. Löydä 8 eläinparia mahdollisimman vähillä yrityksillä
     Optimoitu renderöintiä React Memo():n avulla
 
-Memorygame: <br/>
+Typing game: <br/>
  -  Testaa kirjoitusnopeutesi! Tehty Hookeilla. Laskee kirjoitetut sanat ja         kirjaimet kovakoodatun(30sec) ajan sisällä
 
 Counter: <br/>
