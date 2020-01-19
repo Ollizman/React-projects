@@ -4,6 +4,9 @@ Memorygame: <br/>
  -  Uusin projekti. Löydä 8 eläinparia mahdollisimman vähillä yrityksillä
     Optimoitu renderöintiä React Memo():n avulla
 
+Memorygame: <br/>
+ -  Testaa kirjoitusnopeutesi! Tehty Hookeilla. Laskee kirjoitetut sanat ja         kirjaimet kovakoodatun(30sec) ajan sisällä
+
 Counter: <br/>
  -  tehty käyttäen Redux kirjastoa state hallintaan.
 

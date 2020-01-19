@@ -4,11 +4,10 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Speedgame from "./speedgame/Speedgame";
 import Counter from "./counter/Counter";
 import Memorygame from "./memorygame/Memorygame";
-import typingGame from "./typinggame/Typinggame";
+import Typinggame from "./typinggame/Typinggame";
 import FormPrac2 from "./Forms/FormPrac2";
 import MemeApp from "./Meme/MemeApp";
 import Typinggame from "./typinggame/Typinggame";
-
 
 class App extends Component {
   home = () => {
@@ -29,8 +28,14 @@ class App extends Component {
         <ul>
           <li>
             <h4>Memorygame : </h4>
-            Uusin projekti. Löydä 8 eläinparia mahdollisimman vähillä yrityksillä! <br />
+            Löydä 8 eläinparia mahdollisimman vähillä yrityksillä! <br />
             Optimoitu renderöintiä React Memo():n avulla
+          </li>
+          <li>
+            <h4>Typing game : </h4>
+            Testaa kirjoitusnopeutesi! <br />
+            Tehty Hookeilla. Laskee kirjoitetut sanat ja kirjaimet
+            kovakoodatun(30sec) ajan sisällä
           </li>
           <li>
             <h5>Counter: </h5>
@@ -95,8 +100,7 @@ class App extends Component {
           <MemeApp />
         ) : match.params.name === "typing" ? (
           <Typinggame />
-        ) :
-          (
+        ) : (
           <div />
         )}
       </>

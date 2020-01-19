@@ -11,7 +11,7 @@ function Card(props) {
 
   Card.propTypes = {
     //setting accepted prop types and that the prop is required for active prop.
-    active: PropTypes.bool.isRequired, //function based component, Cards.propTypes = {}
+    active: PropTypes.bool.isRequired,
     name: PropTypes.string
   };
 

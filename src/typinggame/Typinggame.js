@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Typinggame.css";
 import useSpeedTyping from "./useSpeedTyping";
 
-const TIMER = "15"; //set timer for the game(seconds)
+const TIMER = "30"; //set timer for the game(seconds)
 const BASE_API_URL = "https://random-word-api.herokuapp.com/";
 const API_KEY = "62URKTA8";
 

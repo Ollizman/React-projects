@@ -16,8 +16,6 @@ const resultsReducer = (state = initialState, action) => {
                 return {
                     ...state, results: state.results.filter(result => result.id !== action.resultElementId)
                 };
-       default:
-           break;
     }
     return state;
 }
