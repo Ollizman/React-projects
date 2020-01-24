@@ -2,10 +2,11 @@ import { useState, useEffect, useRef } from "react";
 
 const ON = 1;
 const OFF = 0;
+const TIMER = 30 // starting time
 
-const useSpeedTyping = (timer) => {
+const useSpeedTyping = () => {
   const [text, setText] = useState("");
-  const [timeCounter, setTimeCounter] = useState(timer);
+  const [timeCounter, setTimeCounter] = useState(TIMER);
   const [start, setStart] = useState(OFF);
   const [words, setWords] = useState(0);
   const [chars, setChars] = useState(0);
@@ -49,6 +50,10 @@ const wordCount = str => {
   }).length;
 };
 
+const changeTimer = () => {
+  timeCounter === 60 ? setTimeCounter(30) : setTimeCounter(60)
+  }
+
 const startGame = () => {
   setStart(ON);
   setGameOver(false);
@@ -62,8 +67,8 @@ const stopGame = () => {
   if (!gameOver || start === OFF) return;
   setStart(OFF);
   setTimeout(() => {
-    setTimeCounter(timer);
-    alert(`You wrote ${words} words in ${timer} seconds!
+    setTimeCounter(timeCounter);
+    alert(`You wrote ${words} words in ${timeCounter} seconds!
       ..and includes total of ${chars} characters (incl.spaces)`);
   }, 999);
 };
@@ -71,7 +76,7 @@ const stopGame = () => {
 useEffect(stopGame, [gameOver]);
 
 return {text, timeCounter, start, words, color, gameOver, setGameOver, 
-    startGame, handleChange, ON, OFF, textRef}
+    startGame, handleChange, changeTimer, ON, OFF, textRef}
 }
 
 export default useSpeedTyping

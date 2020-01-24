@@ -7,7 +7,6 @@ import Memorygame from "./memorygame/Memorygame";
 import Typinggame from "./typinggame/Typinggame";
 import FormPrac2 from "./Forms/FormPrac2";
 import MemeApp from "./Meme/MemeApp";
-import Typinggame from "./typinggame/Typinggame";
 
 class App extends Component {
   home = () => {
@@ -32,7 +31,7 @@ class App extends Component {
             Optimoitu renderöintiä React Memo():n avulla
           </li>
           <li>
-            <h4>Typing game : </h4>
+            <h4>SpeedTyping : </h4>
             Testaa kirjoitusnopeutesi! <br />
             Tehty Hookeilla. Laskee kirjoitetut sanat ja kirjaimet
             kovakoodatun(30sec) ajan sisällä
@@ -71,7 +70,7 @@ class App extends Component {
         <p>
           <Link to={`${match.url}/formprac2`}>Form Practise 2 -- </Link>
           <Link to={`${match.url}/meme`}>Meme Generator -- </Link>
-          <Link to={`${match.url}/typing`}>Typing game -- </Link>
+          <Link to={`${match.url}/Speedtyping`}>Speed Typing -- </Link>
         </p>
 
         <div className="projects">
@@ -98,7 +97,7 @@ class App extends Component {
           <FormPrac2 />
         ) : match.params.name === "meme" ? (
           <MemeApp />
-        ) : match.params.name === "typing" ? (
+        ) : match.params.name === "Speedtyping" ? (
           <Typinggame />
         ) : (
           <div />
