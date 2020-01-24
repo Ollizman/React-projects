@@ -5,7 +5,7 @@ Memory game: <br/>
     Optimoitu renderöintiä React Memo():n avulla
 
 Typing game: <br/>
- -  Testaa kirjoitusnopeutesi! Tehty Hookeilla. Laskee kirjoitetut sanat ja         kirjaimet kovakoodatun(30sec) ajan sisällä
+ -  Testaa kirjoitusnopeutesi! Tehty Hookeilla. Laskee kirjoitetut sanat ja kirjaimet annetun ajan sisällä
 
 Counter: <br/>
  -  tehty käyttäen Redux kirjastoa state hallintaan.
