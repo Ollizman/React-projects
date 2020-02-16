@@ -19,6 +19,10 @@ const RandomWords = () => {
           setRandWords(`Sorry! ${response} --${ERROR_MSG}`);
         }
         console.log(response);
+      })
+      .catch(error => {
+        console.log(error);
+        setRandWords(`Sorry! ${error} --${ERROR_MSG}`);
       });
   }, [showRandWords]);
 

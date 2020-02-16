@@ -1,30 +1,30 @@
 .container {
-    text-align: center;
-    color: white;
-    background-color: black;
+  text-align: center;
+  color: white;
+  background-color: black;
 }
 
 ul {
-    list-style-type: none;
-    margin-left: 25px;
-    padding: 0;
-    text-align: left;
+  list-style-type: none;
+  margin-left: 25px;
+  padding: 0;
+  text-align: left;
 }
 
 .nav {
-    text-align: left;
+  text-align: left;
 }
 
 .projects {
-    background-color: rgb(113, 129, 118);
+  background-color: rgb(113, 129, 118);
 }
 
 a:link {
-    color: red;
+  color: red;
 }
 
 /* visited link */
 
 a:visited {
-    color: white;
+  color: white;
 }

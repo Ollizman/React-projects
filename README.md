@@ -1,7 +1,7 @@
 <h6>-- Projekteja:</h6>
 
 Memory game: <br/>
- -  Uusin projekti. Löydä 8 eläinparia mahdollisimman vähillä yrityksillä
+ -  Löydä 8 eläinparia mahdollisimman vähillä yrityksillä
     Optimoitu renderöintiä React Memo():n avulla
 
 Typing game: <br/>
@@ -11,7 +11,6 @@ Counter: <br/>
  -  tehty käyttäen Redux kirjastoa state hallintaan.
 
 Speedgame: <br/>
- -  tehty React Hooks tyylillä.
 
 API testing: <br/>
  -  Testattu Star Wars rajapinnasta tiedon hakemista ja näyttämistä

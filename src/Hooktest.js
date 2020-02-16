@@ -60,7 +60,6 @@ function Hooktest() {
       <h1>Is is really you? {answer}</h1>
       <h2 style={{ color: color }}>Counter: {counter}</h2>
       <button onClick={addOne}>Nappi</button>
-
       <button onClick={consoleJsPractises}>JS loggaukset!</button>
     </div>
   );

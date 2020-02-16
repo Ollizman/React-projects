@@ -1,9 +1,9 @@
-import React from "react"
-import "./MemorygameOver.css"
+import React from "react";
+import "./MemorygameOver.css";
 
 const closeHandler = () => {
-  window.location.reload()
-}
+  window.location.reload();
+};
 
 const MemorygameOver = props => {
   return (
@@ -17,7 +17,7 @@ const MemorygameOver = props => {
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default MemorygameOver
+export default MemorygameOver;

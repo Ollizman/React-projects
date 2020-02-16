@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import * as actionTypes from "../actions";
 
 class Counter extends Component {
-
   checkNumber = () => {
     let color = "";
     this.props.ctr === 0
@@ -18,8 +17,17 @@ class Counter extends Component {
   };
 
   render() {
-    const { ctr, onIncCounter, onDecCounter, onAddCounter, onRemCounter,
-      onDeleteCounter, onStoreCounter, results, reset } = this.props;
+    const {
+      ctr,
+      onIncCounter,
+      onDecCounter,
+      onAddCounter,
+      onRemCounter,
+      onDeleteCounter,
+      onStoreCounter,
+      results,
+      reset
+    } = this.props;
 
     return (
       <div className={"counter " + this.checkNumber()}>
@@ -51,15 +59,22 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchtoProps = dispatch => {
-  const {INCREMENT, DECREMENT, ADD, REMOVE, RESET, STORE_RESULT, DELETE_RESULT} = actionTypes
+  const {
+    INCREMENT,
+    DECREMENT,
+    ADD,
+    REMOVE,
+    RESET,
+    STORE_RESULT,
+    DELETE_RESULT
+  } = actionTypes;
   return {
     onIncCounter: () => dispatch({ type: INCREMENT }),
     onDecCounter: () => dispatch({ type: DECREMENT }),
     onAddCounter: () => dispatch({ type: ADD, value: 5 }),
     onRemCounter: () => dispatch({ type: REMOVE, value: 5 }),
     reset: () => dispatch({ type: RESET }),
-    onStoreCounter: result =>
-      dispatch({ type: STORE_RESULT, result: result }),
+    onStoreCounter: result => dispatch({ type: STORE_RESULT, result: result }),
     onDeleteCounter: id =>
       dispatch({ type: DELETE_RESULT, resultElementId: id })
   };
