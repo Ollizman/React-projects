@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Typinggame.css";
+import { Button } from "../Buttons";
 
 const BASE_API_URL = "https://random-word-api.herokuapp.com/";
 const API_KEY = "62URKTA8";
@@ -28,15 +29,14 @@ const RandomWords = () => {
 
   return (
     <>
-      <button
-        className="button"
+      <Button
         onClick={() =>
           !showRandWords ? setShowRandWords(true) : setShowRandWords(false)
         }
         style={{ textAlign: "left", display: "flex" }}
       >
         {!showRandWords ? "Get" : "Hide"} example words!
-      </button>
+      </Button>
       <textarea
         name="randWords"
         style={{

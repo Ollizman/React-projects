@@ -2,6 +2,7 @@ import React from "react";
 import useSpeedTyping from "./useSpeedTyping";
 import "./Typinggame.css";
 import RandomWords from "./RandomWords";
+import { Button } from "../Buttons";
 
 const TypinggameUI = () => {
   const {
@@ -46,9 +47,9 @@ const TypinggameUI = () => {
         Stop
       </button>{" "}
       <br />
-      <button onClick={changeTimer} disabled={start === ON}>
+      <Button primary onClick={changeTimer} disabled={start === ON}>
         30/60
-      </button>
+      </Button>
       <RandomWords />
     </div>
   );

@@ -7,6 +7,7 @@ import Memorygame from "./memorygame/Memorygame";
 import Typinggame from "./typinggame/Typinggame";
 import FormPrac2 from "./Forms/FormPrac2";
 import MemeApp from "./Meme/MemeApp";
+import { Button } from "./Buttons";
 
 class App extends Component {
   home = () => {
@@ -63,14 +64,26 @@ class App extends Component {
       <div className="project-container">
         <h2> Projects </h2>
         <p>
-          <Link to={`${match.url}/counter`}>Contergame -- </Link>
-          <Link to={`${match.url}/speedgame`}>Speedgame 2.7 -- </Link>
-          <Link to={`${match.url}/memorygame`}>Memorygame -- </Link>
+          <Link to={`${match.url}/counter`}>
+            <Button>Contergame</Button>
+          </Link>
+          <Link to={`${match.url}/speedgame`}>
+            <Button>Speedgame 2.7</Button>
+          </Link>
+          <Link to={`${match.url}/memorygame`}>
+            <Button>Memorygame</Button>
+          </Link>
         </p>
         <p>
-          <Link to={`${match.url}/formprac2`}>Form Practise 2 -- </Link>
-          <Link to={`${match.url}/meme`}>Meme Generator -- </Link>
-          <Link to={`${match.url}/Speedtyping`}>Speed Typing -- </Link>
+          <Link to={`${match.url}/formprac2`}>
+            <Button>Form Practise</Button>
+          </Link>
+          <Link to={`${match.url}/meme`}>
+            <Button>Meme Generator</Button>
+          </Link>
+          <Link to={`${match.url}/Speedtyping`}>
+            <Button>Speed Typing</Button>
+          </Link>
         </p>
 
         <div className="projects">
@@ -109,11 +122,17 @@ class App extends Component {
     return (
       <div className="nav">
         <nav>
-          <Link to="/"> Home </Link>
+          <Link to="/">
+            <Button primary>Home</Button>
+          </Link>
 
-          <Link to="/about"> About</Link>
+          <Link to="/about">
+            <Button primary>About</Button>
+          </Link>
 
-          <Link to="/projects"> Projects </Link>
+          <Link to="/projects">
+            <Button primary>Projects</Button>
+          </Link>
         </nav>
       </div>
     );

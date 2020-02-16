@@ -1,7 +1,7 @@
 .container {
   text-align: center;
   color: white;
-  background-color: black;
+  background-color: rgb(36, 34, 34);
 }
 
 ul {
@@ -20,7 +20,7 @@ ul {
 }
 
 a:link {
-  color: red;
+  color: white;
 }
 
 /* visited link */

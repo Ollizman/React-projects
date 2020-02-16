@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./CounterHook.css";
 import { connect } from "react-redux";
 import * as actionTypes from "../actions";
+import { Button } from '../Buttons';
 
 class Counter extends Component {
   checkNumber = () => {
@@ -33,12 +34,12 @@ class Counter extends Component {
       <div className={"counter " + this.checkNumber()}>
         <p>Hello world! </p>
         <p>You clicked {ctr} times!!</p>
-        <button onClick={onIncCounter}>Add</button>
-        <button onClick={onDecCounter}>Decrease</button>
-        <button onClick={onAddCounter}>add 5</button>
-        <button onClick={onRemCounter}>remove 5</button>
-        <button onClick={reset}>Reset</button>
-        <button onClick={() => onStoreCounter(ctr)}>Store</button>
+        <Button counter onClick={onIncCounter}>Add</Button>
+        <Button counter onClick={onDecCounter}>Decrease</Button>
+        <Button counter onClick={onAddCounter}>add 5</Button>
+        <Button counter onClick={onRemCounter}>remove 5</Button>
+        <Button counter onClick={reset}>Reset</Button>
+        <Button counter onClick={() => onStoreCounter(ctr)}>Store</Button>
         <ul>
           {results.map(item => (
             <li key={item.id} onClick={() => onDeleteCounter(item.id)}>

@@ -11,6 +11,7 @@
 
 .button {
   font-family: 'Press Start 2P', cursive;
+  border-radius: 25%;
   display: inline-block;
   margin-right: 5px;
   border: none;
