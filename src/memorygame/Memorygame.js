@@ -176,7 +176,7 @@ class Memorygame extends Component {
     return (
       <div className="grid-container">
         <div className="wrapper">{this.CardsToRender()}</div>
-        {matches === 1 && <MemorygameOver missmatches={missmatches} />}
+        {matches === 8 && <MemorygameOver missmatches={missmatches} />}
       </div>
     );
   }
