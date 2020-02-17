@@ -3,16 +3,33 @@ import "./Speedgame.css";
 import Box from "./Box";
 import GameOver from "./GameOver";
 const colors = ["green", "yellow", "red", "blue"];
-const activeQueue = [];
+let activeQueue = [];
+const ON = 1;
+const OFF = 0;
 
 class Speedgame extends Component {
   state = {
+    isGameOn: OFF,
     score: 0,
     scoreFlasher: 0,
     activeBox: undefined,
     pace: 1700,
     gameOver: false,
     missclicks: 0
+  };
+
+  beginning = () => {
+    console.log("toimii");
+    activeQueue = [];
+    this.setState({
+      isGameOn: OFF,
+      score: 0,
+      scoreFlasher: 0,
+      activeBox: undefined,
+      pace: 1700,
+      gameOver: false,
+      missclicks: 0
+    });
   };
 
   flash = () => {
@@ -70,6 +87,11 @@ class Speedgame extends Component {
   };
 
   startGame = () => {
+    if (this.state.isGameOn === ON) {
+      return;
+    } else {
+      this.setState({ isGameOn: ON });
+    }
     this.next();
   };
   stopGame = () => {
@@ -122,7 +144,9 @@ class Speedgame extends Component {
           <button onClick={this.stopGame}>Stop!</button>
         </div>
 
-        {this.state.gameOver && <GameOver score={this.state.score} />}
+        {this.state.gameOver && (
+          <GameOver score={this.state.score} reFresh={this.beginning} />
+        )}
       </div>
     );
   }

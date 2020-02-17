@@ -129,7 +129,6 @@ class Memorygame extends Component {
   hit = animalName => {
     const name = animalName;
     const { matches } = this.state;
-    console.log("Yippii! hit on " + name);
 
     this.setState(prevState => ({
       animals: prevState.animals.map(ani =>
@@ -137,7 +136,6 @@ class Memorygame extends Component {
       ),
       matches: matches + 1 //since this reaches value of 8, pops up the GameOver Component
     }));
-    console.log("matches: " + this.state.matches);
   };
 
   shuffle = array => {
@@ -178,7 +176,7 @@ class Memorygame extends Component {
     return (
       <div className="grid-container">
         <div className="wrapper">{this.CardsToRender()}</div>
-        {matches === 8 && <MemorygameOver missmatches={missmatches} />}
+        {matches === 1 && <MemorygameOver missmatches={missmatches} />}
       </div>
     );
   }
