@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/Gamehub/static/css/main.0cc818aa.chunk.css",
-    "main.js": "/Gamehub/static/js/main.db057bee.chunk.js",
-    "main.js.map": "/Gamehub/static/js/main.db057bee.chunk.js.map",
-    "runtime-main.js": "/Gamehub/static/js/runtime-main.7eed1668.js",
-    "runtime-main.js.map": "/Gamehub/static/js/runtime-main.7eed1668.js.map",
-    "static/js/2.e2797808.chunk.js": "/Gamehub/static/js/2.e2797808.chunk.js",
-    "static/js/2.e2797808.chunk.js.map": "/Gamehub/static/js/2.e2797808.chunk.js.map",
-    "index.html": "/Gamehub/index.html",
-    "precache-manifest.5f4268e57d25903ef788b60e281adea1.js": "/Gamehub/precache-manifest.5f4268e57d25903ef788b60e281adea1.js",
-    "service-worker.js": "/Gamehub/service-worker.js",
-    "static/css/main.0cc818aa.chunk.css.map": "/Gamehub/static/css/main.0cc818aa.chunk.css.map",
-    "static/js/2.e2797808.chunk.js.LICENSE": "/Gamehub/static/js/2.e2797808.chunk.js.LICENSE"
+    "main.css": "/React-projects/Gamehub/static/css/main.0cc818aa.chunk.css",
+    "main.js": "/React-projects/Gamehub/static/js/main.db057bee.chunk.js",
+    "main.js.map": "/React-projects/Gamehub/static/js/main.db057bee.chunk.js.map",
+    "runtime-main.js": "/React-projects/Gamehub/static/js/runtime-main.7e642fd5.js",
+    "runtime-main.js.map": "/React-projects/Gamehub/static/js/runtime-main.7e642fd5.js.map",
+    "static/js/2.09784f6e.chunk.js": "/React-projects/Gamehub/static/js/2.09784f6e.chunk.js",
+    "static/js/2.09784f6e.chunk.js.map": "/React-projects/Gamehub/static/js/2.09784f6e.chunk.js.map",
+    "index.html": "/React-projects/Gamehub/index.html",
+    "precache-manifest.8a8d381bc46626c19c7dde9269e8d12a.js": "/React-projects/Gamehub/precache-manifest.8a8d381bc46626c19c7dde9269e8d12a.js",
+    "service-worker.js": "/React-projects/Gamehub/service-worker.js",
+    "static/css/main.0cc818aa.chunk.css.map": "/React-projects/Gamehub/static/css/main.0cc818aa.chunk.css.map",
+    "static/js/2.09784f6e.chunk.js.LICENSE": "/React-projects/Gamehub/static/js/2.09784f6e.chunk.js.LICENSE"
   },
   "entrypoints": [
-    "static/js/runtime-main.7eed1668.js",
-    "static/js/2.e2797808.chunk.js",
+    "static/js/runtime-main.7e642fd5.js",
+    "static/js/2.09784f6e.chunk.js",
     "static/css/main.0cc818aa.chunk.css",
     "static/js/main.db057bee.chunk.js"
   ]
