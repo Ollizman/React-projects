@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/React-projects/Gamehub/static/css/main.0cc818aa.chunk.css",
-    "main.js": "/React-projects/Gamehub/static/js/main.db057bee.chunk.js",
-    "main.js.map": "/React-projects/Gamehub/static/js/main.db057bee.chunk.js.map",
-    "runtime-main.js": "/React-projects/Gamehub/static/js/runtime-main.7e642fd5.js",
-    "runtime-main.js.map": "/React-projects/Gamehub/static/js/runtime-main.7e642fd5.js.map",
-    "static/js/2.09784f6e.chunk.js": "/React-projects/Gamehub/static/js/2.09784f6e.chunk.js",
-    "static/js/2.09784f6e.chunk.js.map": "/React-projects/Gamehub/static/js/2.09784f6e.chunk.js.map",
-    "index.html": "/React-projects/Gamehub/index.html",
-    "precache-manifest.8a8d381bc46626c19c7dde9269e8d12a.js": "/React-projects/Gamehub/precache-manifest.8a8d381bc46626c19c7dde9269e8d12a.js",
-    "service-worker.js": "/React-projects/Gamehub/service-worker.js",
-    "static/css/main.0cc818aa.chunk.css.map": "/React-projects/Gamehub/static/css/main.0cc818aa.chunk.css.map",
-    "static/js/2.09784f6e.chunk.js.LICENSE": "/React-projects/Gamehub/static/js/2.09784f6e.chunk.js.LICENSE"
+    "main.css": "/React-projects/static/css/main.0cc818aa.chunk.css",
+    "main.js": "/React-projects/static/js/main.db057bee.chunk.js",
+    "main.js.map": "/React-projects/static/js/main.db057bee.chunk.js.map",
+    "runtime-main.js": "/React-projects/static/js/runtime-main.8e1aff41.js",
+    "runtime-main.js.map": "/React-projects/static/js/runtime-main.8e1aff41.js.map",
+    "static/js/2.23115797.chunk.js": "/React-projects/static/js/2.23115797.chunk.js",
+    "static/js/2.23115797.chunk.js.map": "/React-projects/static/js/2.23115797.chunk.js.map",
+    "index.html": "/React-projects/index.html",
+    "precache-manifest.076623ec4b6af757577e2b9462f6b20e.js": "/React-projects/precache-manifest.076623ec4b6af757577e2b9462f6b20e.js",
+    "service-worker.js": "/React-projects/service-worker.js",
+    "static/css/main.0cc818aa.chunk.css.map": "/React-projects/static/css/main.0cc818aa.chunk.css.map",
+    "static/js/2.23115797.chunk.js.LICENSE": "/React-projects/static/js/2.23115797.chunk.js.LICENSE"
   },
   "entrypoints": [
-    "static/js/runtime-main.7e642fd5.js",
-    "static/js/2.09784f6e.chunk.js",
+    "static/js/runtime-main.8e1aff41.js",
+    "static/js/2.23115797.chunk.js",
     "static/css/main.0cc818aa.chunk.css",
     "static/js/main.db057bee.chunk.js"
   ]
