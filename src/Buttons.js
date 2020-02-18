@@ -14,6 +14,8 @@ const Button = styled.button`
       border-radius: 7px;
       border: 2px solid darkgreen;
       color: white;
+      font-weight: bold;
+      width: 120px;
     `};
   ${props =>
     props.counter &&

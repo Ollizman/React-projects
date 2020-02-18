@@ -8,11 +8,12 @@ ul {
   list-style-type: none;
   margin-left: 25px;
   padding: 0;
-  text-align: left;
 }
 
 .nav {
-  text-align: left;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
 }
 
 .projects {
@@ -27,4 +28,10 @@ a:link {
 
 a:visited {
   color: white;
+}
+h4 {
+  color: lightgreen;
+}
+h5 {
+  color: lightgreen;
 }
