@@ -35,7 +35,7 @@ class App extends Component {
             <h4>SpeedTyping : </h4>
             Testaa kirjoitusnopeutesi! <br />
             Tehty Hookeilla. Laskee kirjoitetut sanat ja kirjaimet
-            kovakoodatun(30sec) ajan sisällä
+            kovakoodatun(30sec / 60sec) ajan sisällä
           </li>
           <li>
             <h5>Counter: </h5>

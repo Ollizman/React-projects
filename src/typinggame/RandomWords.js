@@ -19,10 +19,8 @@ const RandomWords = () => {
         if (response === "wrong API key") {
           setRandWords(`Sorry! ${response} --${ERROR_MSG}`);
         }
-        console.log(response);
       })
       .catch(error => {
-        console.log(error);
         setRandWords(`Sorry! ${error} --${ERROR_MSG}`);
       });
   }, [showRandWords]);
