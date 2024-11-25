@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Speedgame from "./speedgame/Speedgame";
 import Counter from "./counter/Counter";
 import Memorygame from "./memorygame/Memorygame";
