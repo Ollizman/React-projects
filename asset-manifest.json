@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/React-projects/static/css/main.c473a490.chunk.css",
-    "main.js": "/React-projects/static/js/main.9e3af7dd.chunk.js",
-    "main.js.map": "/React-projects/static/js/main.9e3af7dd.chunk.js.map",
+    "main.css": "/React-projects/static/css/main.e3fd38cf.chunk.css",
+    "main.js": "/React-projects/static/js/main.2577b997.chunk.js",
+    "main.js.map": "/React-projects/static/js/main.2577b997.chunk.js.map",
     "runtime-main.js": "/React-projects/static/js/runtime-main.8e1aff41.js",
     "runtime-main.js.map": "/React-projects/static/js/runtime-main.8e1aff41.js.map",
-    "static/js/2.1b900b38.chunk.js": "/React-projects/static/js/2.1b900b38.chunk.js",
-    "static/js/2.1b900b38.chunk.js.map": "/React-projects/static/js/2.1b900b38.chunk.js.map",
+    "static/js/2.4215cecf.chunk.js": "/React-projects/static/js/2.4215cecf.chunk.js",
+    "static/js/2.4215cecf.chunk.js.map": "/React-projects/static/js/2.4215cecf.chunk.js.map",
     "index.html": "/React-projects/index.html",
-    "precache-manifest.d6c7e4a7b5f327fe04a0d6a969b31ae6.js": "/React-projects/precache-manifest.d6c7e4a7b5f327fe04a0d6a969b31ae6.js",
+    "precache-manifest.a86bdc8eeb3202219e49c4ac99deed3b.js": "/React-projects/precache-manifest.a86bdc8eeb3202219e49c4ac99deed3b.js",
     "service-worker.js": "/React-projects/service-worker.js",
-    "static/css/main.c473a490.chunk.css.map": "/React-projects/static/css/main.c473a490.chunk.css.map",
-    "static/js/2.1b900b38.chunk.js.LICENSE": "/React-projects/static/js/2.1b900b38.chunk.js.LICENSE"
+    "static/css/main.e3fd38cf.chunk.css.map": "/React-projects/static/css/main.e3fd38cf.chunk.css.map",
+    "static/js/2.4215cecf.chunk.js.LICENSE": "/React-projects/static/js/2.4215cecf.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.8e1aff41.js",
-    "static/js/2.1b900b38.chunk.js",
-    "static/css/main.c473a490.chunk.css",
-    "static/js/main.9e3af7dd.chunk.js"
+    "static/js/2.4215cecf.chunk.js",
+    "static/css/main.e3fd38cf.chunk.css",
+    "static/js/main.2577b997.chunk.js"
   ]
 }
